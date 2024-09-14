@@ -6,18 +6,25 @@ body{
     display: flex;
     flex-direction: column;
     margin: 50px auto;
-    flex: 0 0 300px;
+    flex: 0 0 280px;
     border: 1px solid black;
     padding: 16px;
     border-radius: 5px;
     gap: 30px;
 }
-
+/* display screen */
 .display {
-    flex: 0 0 150px;
+    flex: 0 0 100px;
     border: 1px solid black;
-    padding: 8px;
 }
+
+#expression, #result {
+    text-align: end;
+    margin-right: 16px;
+    height: 20px;
+}
+
+/* buttons */
 
 .buttons {
     display: flex;
@@ -38,7 +45,7 @@ body{
     width: 60px;
 }
 
-.numbers{
+.numbers {
  display: flex;
  flex-wrap: wrap;
  gap: 10px;
@@ -46,6 +53,12 @@ body{
 
 .numbers button {
     width: 60px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .operators {
