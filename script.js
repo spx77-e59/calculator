@@ -32,4 +32,17 @@ function operate(operator, operand1, operand2) {
             return("Error");
     }
 }
+const display = document.querySelector(".display");
+let displayValue = "";
+
+function displayHandler(e) {
+    displayValue +=e.target.textContent;
+    display.textContent = displayValue;
+}
+
+const numbers = document.querySelector(".numbers");
+const show = document.querySelector(".show");
+
+numbers.addEventListener("click", displayHandler);
+show.addEventListener("click", displayHandler);
 
