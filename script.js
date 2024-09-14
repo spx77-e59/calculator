@@ -91,6 +91,9 @@ function expressionHandler(e, exp) {
           return;
         }
       }
+      if (operand1.length > 10) {
+        return;
+      }
 
       operand1 += value;
       expression += value;
@@ -109,6 +112,11 @@ function expressionHandler(e, exp) {
           return;
         }
       }
+
+      if (operand2.length > 10) {
+        return;
+      }
+
       operand2 += value;
       expression += value;
     } else if (operation.includes(value) && operator.length === 0) {
@@ -130,23 +138,23 @@ function equalsHandler(rt) {
       return;
     }
     result = operate(operator, Number(operand1), Number(operand2));
-    if(result === Infinity) result = "can't divide by 0";
-    console.log(typeof result, result);
-    if(countDecimalPoints(result)>6) result = Number(result).toFixed(6);
+
+    if (result === Infinity) result = "can't divide by 0";
+
+    if (countDecimalPoints(result) > 6) result = Number(result).toFixed(6);
     rt.textContent = result;
     operand1 = "";
     operand2 = "";
     operator = "";
     expression = "";
     result = "";
-    console.log("rt:", result);
   }
 }
 
 function countDecimalPoints(n) {
   const string = n.toString();
   const parts = string.split(".");
-  if(parts.length === 2) {
+  if (parts.length === 2) {
     return parts[1].length;
   } else {
     return 0;
