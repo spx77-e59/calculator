@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    flex: 0 0 300px;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 5px;
+    gap: 30px;
+}
+
+.display {
+    flex: 0 0 150px;
+    border: 1px solid black;
+}
+
+.buttons {
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.utils {
+    display: flex;
+    gap: 10px;
+}
+
+.utils button {
+    width: 60px;
+}
+
+.numbers{
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+}
+
+.numbers button {
+    width: 60px;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.operators button {
+    width: 50px;
+}
