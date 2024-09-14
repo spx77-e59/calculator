@@ -32,3 +32,4 @@ function operate(operator, operand1, operand2) {
             return("Error");
     }
 }
+
